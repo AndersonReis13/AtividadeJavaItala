@@ -11,7 +11,7 @@ public class MethodPaymentCard implements PaymentMethod {
 		double tax = amount + (amount * 0.05); // tax value of 5%
 		
 		if(tax > client.getCard().getLimit() ) {
-			throw new ExceptionsTratament("Valor invalido, limit menor que o valor inserido");
+			throw new ExceptionsTratament("Value invalid, limit smaller than the proposed value");
 		} 
 			
 

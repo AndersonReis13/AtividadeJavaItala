@@ -1,14 +1,22 @@
 package entites;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Account {
 	private String name;
 	private String address;
 	private Double cpf;
 
-	public Account(String name, String address, Double cpf) {
+	private List ListAccount = new ArrayList<>();
+
+	private BankAccount bankAccount;
+
+	public Account(String name, String address, Double cpf, BankAccount bankAccount) {
 		this.name = name;
 		this.address = address;
 		this.cpf = cpf;
+		this.bankAccount = bankAccount;
 	}
 
 	public String getName() {
@@ -29,6 +37,10 @@ public class Account {
 
 	public Double getCpf() {
 		return cpf;
+	}
+
+	public void RegisterAccount(Account account){
+		ListAccount.add(account);
 	}
 
 }

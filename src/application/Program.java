@@ -33,7 +33,7 @@ public class Program {
 		System.out.print("Limite: ");
 		Double limit = sc.nextDouble();
 
-		Client client = new Client(name, addres, cpf, bag, new Card(cod, limit));
+		//Client client = new Client(name, addres, cpf, bag, new Card(cod, limit));
 
 		System.out.println("--Comecando metodo de pagamento--");
 

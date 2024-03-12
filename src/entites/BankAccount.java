@@ -1,38 +1,38 @@
 package entites;
 
-public class BankAccount extends Account{
-	
-	
+import java.util.Random;
 
+public class BankAccount{
 	private Integer codAgency;
-	private Double saldo;
-	private Double saque;
-	
-	public BankAccount(String name, String address, Double cpf, Integer codAgency, Double saldo, Double saque) {
-		super(name, address, cpf);
+	private Double balance;
+	private Double withdrawn;
+
+
+	public BankAccount(String name, String address, Double cpf, Integer codAgency, Double balance, Double withdrawn) {
 		this.codAgency = codAgency;
-		this.saldo = saldo;
-		this.saque = saque;
+		this.balance = balance;
+		this.withdrawn = withdrawn;
 	}
 
 	public Integer getCodAgency() {
 		return codAgency;
 	}
 
-	public void setCodAgency(Integer codAgency) {
-		this.codAgency = codAgency;
+	public Double getBalance() {
+		return balance;
 	}
 
-	public Double getSaldo() {
-		return saldo;
+	public Double getWithdrawn() {
+		return withdrawn;
 	}
 
-	public Double getSaque() {
-		return saque;
+	public void setSaque(Double withdrawn) {
+		this.withdrawn = withdrawn;
 	}
 
-	public void setSaque(Double saque) {
-		this.saque = saque;
+	public void generateCodAgency(){
+		Random randomNumberAgency = new Random();
+
+
 	}
-	
 }
