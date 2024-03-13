@@ -4,13 +4,15 @@ import java.time.LocalDateTime;
 
 public class Card {
     private Integer cod;
-    private LocalDateTime limitDate;
     private Double limit;
+    private Integer password;
 
-    public Card(Integer cod, LocalDateTime limitDate, Double limit) {
+    private Invoice invoice;
+
+    public Card(Integer cod, Double limit, Integer password) {
         this.cod = cod;
-        this.limitDate = limitDate;
         this.limit = limit;
+        this.password = password;
     }
 
     public Integer getCod() {
@@ -21,14 +23,21 @@ public class Card {
         this.cod = cod;
     }
 
-    public LocalDateTime getLimitDate() {
-        return limitDate;
-    }
 
     public Double getLimit() {
         return limit;
     }
-    
-    public void processCard()
-    
+
+    public Invoice getInvoice(){
+        return invoice;
+    }
+
+    public Integer getPassword() {
+        return password;
+    }
+
+
+    public void setLimit(Double valuetotal) {
+        limit = limit - valuetotal;
+    }
 }

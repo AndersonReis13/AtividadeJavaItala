@@ -8,8 +8,6 @@ public class Account {
 	private String address;
 	private Double cpf;
 
-	private List ListAccount = new ArrayList<>();
-
 	private BankAccount bankAccount;
 
 	public Account(String name, String address, Double cpf, BankAccount bankAccount) {
@@ -38,16 +36,20 @@ public class Account {
 	public Double getCpf() {
 		return cpf;
 	}
-	
-	
 
 	public BankAccount getBankAccount() {
 		return bankAccount;
 	}
 
 
-	public void RegisterAccount(Account account){
-		ListAccount.add(account);
+	@Override
+	public String toString(){
+		return "nome: " + name
+			  + " Endereco: " + address
+			  + " cpf:" + cpf
+			  + " Codigo da agencia:" + bankAccount.getCodAgency()
+			  +	" Cash do banco:" + bankAccount.getBalance();
+
 	}
 
 }

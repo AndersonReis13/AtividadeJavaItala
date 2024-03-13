@@ -1,6 +1,5 @@
 package entites;
 
-import entities.enums.ProductEnums;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +8,11 @@ public class Product {
     private String name;
     private Double price;
     private Integer quantity;
-    private ProductEnums productType;
+    private String productType;
 
-    private List<Product> ListProduct = new ArrayList<>();
-    public Product(String name, Double price, Integer quantity, ProductEnums productType) {
+    private Double total;
+
+    public Product(String name, Double price, Integer quantity, String productType) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -35,7 +35,8 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public void registerProduct(Product product) {
-        ListProduct.add(product);
+
+    public Double calc(){
+        return quantity * price;
     }
 }

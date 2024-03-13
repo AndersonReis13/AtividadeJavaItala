@@ -7,13 +7,13 @@ public class MethodPaymentBankAccount implements PaymentMethod {
 
 	@Override
 	public void processPayment(Account account, double amount) {
-		double tax = amount + (amount * 0.05); // tax value of 5%
-		if(tax > account.getBankAccount().getBalance()) {
+
+		if(amount > account.getBankAccount().getBalance()) {
 			throw new ExceptionsTratament("Value invalid, balance smaller than the proposed value");
 		}
-			double returnValue = account.getBankAccount().getBalance() - tax;
+			double returnValue = account.getBankAccount().getBalance();
 			
-			account.getBankAccount().updateBalance(returnValue);;
+			account.getBankAccount().updateBalance(returnValue);
 	}
 
 }	

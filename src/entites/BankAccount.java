@@ -9,10 +9,9 @@ public class BankAccount{
 
 	private Card card;
 
-	public BankAccount(String name, String address, Double cpf, Integer codAgency, Double balance, Double withdrawn, Card card) {
+	public BankAccount(Integer codAgency, Double balance, Card card) {
 		this.codAgency = codAgency;
 		this.balance = balance;
-		this.withdrawn = withdrawn;
 		this.card = card;
 	}
 
@@ -28,9 +27,6 @@ public class BankAccount{
 		return withdrawn;
 	}
 
-	public void setSaque(Double withdrawn) {
-		this.withdrawn = withdrawn;
-	}
 	
 	public Card getCard() {
 		return card;
@@ -44,5 +40,8 @@ public class BankAccount{
 		balance = balance - returnValue;
 	}
 
+	public void withdrawnAccount(double withdrawn){
+		balance = balance - withdrawn;
+	}
 
 }
