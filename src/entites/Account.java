@@ -38,6 +38,13 @@ public class Account {
 	public Double getCpf() {
 		return cpf;
 	}
+	
+	
+
+	public BankAccount getBankAccount() {
+		return bankAccount;
+	}
+
 
 	public void RegisterAccount(Account account){
 		ListAccount.add(account);

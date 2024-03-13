@@ -31,10 +31,18 @@ public class BankAccount{
 	public void setSaque(Double withdrawn) {
 		this.withdrawn = withdrawn;
 	}
+	
+	public Card getCard() {
+		return card;
+	}
 
 	public void generateCodAgency(){
 		Random randomNumberAgency = new Random();
-
-
 	}
+	
+	public void updateBalance(double returnValue) {
+		balance = balance - returnValue;
+	}
+
+
 }

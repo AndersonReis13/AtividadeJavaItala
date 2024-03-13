@@ -28,6 +28,7 @@ public class Card {
     public Double getLimit() {
         return limit;
     }
-
-
+    
+    public void processCard()
+    
 }

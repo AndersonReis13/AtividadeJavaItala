@@ -1,6 +1,6 @@
 package Services;
 
-import entites.Client;
+import entites.Account;
 
 public interface PaymentMethod {
 	
