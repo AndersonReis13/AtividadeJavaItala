@@ -25,10 +25,6 @@ public class Card {
         return limitDate;
     }
 
-    public void setLimitDate(LocalDateTime limitDate) {
-        this.limitDate = limitDate;
-    }
-
     public Double getLimit() {
         return limit;
     }

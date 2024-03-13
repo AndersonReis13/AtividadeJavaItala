@@ -7,11 +7,13 @@ public class BankAccount{
 	private Double balance;
 	private Double withdrawn;
 
+	private Card card;
 
-	public BankAccount(String name, String address, Double cpf, Integer codAgency, Double balance, Double withdrawn) {
+	public BankAccount(String name, String address, Double cpf, Integer codAgency, Double balance, Double withdrawn, Card card) {
 		this.codAgency = codAgency;
 		this.balance = balance;
 		this.withdrawn = withdrawn;
+		this.card = card;
 	}
 
 	public Integer getCodAgency() {

@@ -4,7 +4,7 @@ import entites.Client;
 
 public interface PaymentMethod {
 	
-	 void processPayment(Client client, double amount);
+	 void processPayment(Account account, double amount);
 	
 	// double refoundMake(double amount);
 	
